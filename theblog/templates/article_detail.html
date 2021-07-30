@@ -4,13 +4,23 @@
 {%endblock%}
 
 {% block content %}
+<!-- current user:{{user.id}}
+post author :{{post.author.id}} -->
 
 <h1>{{post.title}}</h1>
-<small>By: {{post.author}}--<i>{{post.post_date}}</i>
-<a href="{%url 'update_post' post.pk%}">(Edit)</a>
+
+<small>By:
+     {{post.author}}--
+     <i>{{post.post_date}}</i>
+    {% if user.is_authenticated%}
+        {%if user.id == post.author.id%}
+        <a href="{%url 'update_post' post.pk%}">(Edit)</a>
+        <a href="{%url 'delete_post' post.pk%}">(Delete)</a>
+        {%endif%}
+    {%endif%}
 </small>
 <br><br><br>
-{{post.body}}
+{{post.body|safe}}
 <br><br>
 <a href="{%url 'home'%}" class="btn btn-secondary">Back</a>
 {% endblock %}

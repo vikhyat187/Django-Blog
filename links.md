@@ -25,3 +25,17 @@
 [django forms styling](https://stackoverflow.com/questions/5827590/css-styling-in-django-forms)
 
 [login redirect](https://stackoverflow.com/questions/4870619/django-after-login-redirect-user-to-his-custom-page-mysite-com-username#:~:text=62-,Django%20%2D%20after%20login%2C%20redirect%20user%20to%20his%20custom%20page,%2D%2D%3E%20mysite.com%2Fusername&text=By%20default%20after%20login%20django,specify%20in%20the%20settings.py.)
+
+[slice in django](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#slice)
+
+[models data types](https://docs.djangoproject.com/en/3.2/ref/models/fields/)
+
+[slugify](https://stackoverflow.com/questions/19335215/what-is-a-slug)
+
+[django slugify](https://docs.djangoproject.com/en/3.2/ref/utils/)
+
+[passing data in class based views like functional views](https://www.geeksforgeeks.org/how-to-pass-additional-context-into-a-class-based-view-django/)
+
+[how to compare values in django](https://stackoverflow.com/questions/16313510/compare-variables-in-django-templates)
+
+[js to find the current logged in user]()
