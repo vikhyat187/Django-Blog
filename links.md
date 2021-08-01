@@ -1,5 +1,6 @@
 [Rendering as html instead of string](https://stackoverflow.com/questions/4848611/rendering-a-template-variable-as-html)
 
+
 [infinite recursion in django](https://stackoverflow.com/questions/52414550/override-save-in-django-causing-infinite-recursion-error)
 
 [csrf tokens django](https://stackoverflow.com/questions/43907641/what-is-the-role-of-django-csrf-token)
@@ -38,4 +39,18 @@
 
 [how to compare values in django](https://stackoverflow.com/questions/16313510/compare-variables-in-django-templates)
 
-[js to find the current logged in user]()
+[get object or 404](https://docs.djangoproject.com/en/3.2/topics/http/shortcuts/)
+
+[adding bootstrap to our fomrs](https://stackoverflow.com/questions/49346582/how-do-i-style-my-user-registration-form-using-bootstrap-in-django)
+
+[adding bootstrap to the username,password feilds](https://stackoverflow.com/questions/24915615/init-got-an-unexpected-keyword-argument-widget)
+
+[adding bootstrap to the username,password feilds](https://stackoverflow.com/questions/3700445/add-additional-options-to-django-form-select-widget)
+
+[use of __init__](https://stackoverflow.com/questions/843580/writing-a-init-function-to-be-used-in-django-model)
+
+[widgets in django](https://docs.djangoproject.com/en/3.2/ref/forms/widgets/#:~:text=A%20widget%20is%20Django's%20representation,uses%20HTML5%20syntax%2C%20targeting%20%3C!)
+
+[django ckeditor](https://django-ckeditor.readthedocs.io/en/latest/#:~:text=Install%20or%20add%20django%2Dckeditor,given%20by%20the%20STATIC_ROOT%20setting.)
+
+[media in django](https://docs.djangoproject.com/en/3.2/topics/forms/media/)

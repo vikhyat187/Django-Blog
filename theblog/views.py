@@ -1,8 +1,10 @@
+from django.http.response import HttpResponseRedirect
 from .models import Category, Post
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from .forms import PostForm,EditForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy,reverse
+
 # Create your views here.
 
 
@@ -11,6 +13,19 @@ from django.urls import reverse_lazy
 def CategoryView(request,cats):
     catergory_post= Post.objects.filter(category=cats.replace('-',' '))
     return render(request,'categories.html',{'cats':cats.title().replace('-',' '),'category_post':catergory_post})
+
+def LikeView(request,pk):
+    post = get_object_or_404(Post,id=request.POST.get('post-id'))
+    liked=False
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        liked=False
+    else:
+        post.likes.add(request.user)
+        liked=True
+        
+    return HttpResponseRedirect(reverse('article-detail',args=[str(pk)]))
+
 
 def CategoryListView(request):
     cat_menu_list= Category.objects.all()
@@ -33,8 +48,16 @@ class ArticleDetailView(DetailView):
     template_name='article_detail.html'
     def get_context_data(self, *args,**kwargs):
         category_menu= Category.objects.all()
+        post_likes= get_object_or_404(Post,id=self.kwargs['pk'])
+
+        liked=False
+        if post_likes.likes.filter(id=self.request.user.id).exists():
+            liked=True
+        total_likes= post_likes.total_likes()
         context= super(ArticleDetailView,self).get_context_data(*args,**kwargs)
         context['category_menu']=category_menu
+        context['total_likes']=total_likes
+        context['liked']=liked
         return context
 
 class AddPostView(CreateView):

@@ -1,5 +1,5 @@
 from os import name
-from .views import *
+from .views import UserRegisterView
 from django.urls import path
  
 urlpatterns = [

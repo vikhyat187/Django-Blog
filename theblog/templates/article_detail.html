@@ -23,4 +23,20 @@ post author :{{post.author.id}} -->
 {{post.body|safe}}
 <br><br>
 <a href="{%url 'home'%}" class="btn btn-secondary">Back</a>
+<br><br>
+<form method="POST" action="{% url 'like-post' post.pk %}">
+    {%csrf_token%}
+    {% if request.user.is_authenticated%}
+    {% if liked == False%}
+    <button type="submit" class="btn btn-warning btn-sm" name="post-id" value="{{post.id}}">Like</button>
+    {%else%}
+    <button type="submit" class="btn btn-danger btn-sm" name="post-id" value="{{post.id}}">Unlike</button>
+    {% endif %}
+    {%else %}
+        
+    <small> <a class="nav-link"href="{%url 'login'%}">Login </a></small>
+    {% endif%}
+  Likes count-    {{total_likes}} Likes
+    <!-- <a href="{%url 'home'%}" class="btn btn-secondary">Back</a> -->
+</form>
 {% endblock %}

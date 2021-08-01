@@ -1,5 +1,5 @@
 from os import name
-from .views import HomeView,ArticleDetailView,UpdatePostView,DeletePostView,AddCategoryView,CategoryView,CategoryListView
+from .views import HomeView,ArticleDetailView,UpdatePostView,DeletePostView,AddCategoryView,CategoryView,CategoryListView,LikeView
 from django.urls import path
 from theblog.views import *
 urlpatterns = [
@@ -12,4 +12,5 @@ urlpatterns = [
     path('article/<int:pk>/delete',DeletePostView.as_view(),name="delete_post"),
     path('category/<str:cats>/',CategoryView,name="category"),
     path('category-list/',CategoryListView,name="category-list"),
+    path('like/<int:pk>',LikeView,name="like-post"),
 ]

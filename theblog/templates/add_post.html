@@ -13,6 +13,7 @@ Add Post
     <form method="POST">
         {%csrf_token%}
         {{form.as_p}}
+        {{form.media}}
         <button class="btn btn-secondary">Post</button>
 </div>
 <script>
