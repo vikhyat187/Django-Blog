@@ -20,6 +20,9 @@ post author :{{post.author.id}} -->
     {%endif%}
 </small>
 <br><br><br>
+{% if post.header_image %}
+<img src='{{post.header_image.url}}' style="height:100px;width:fit-content"/>
+{% endif%}
 {{post.body|safe}}
 <br><br>
 <a href="{%url 'home'%}" class="btn btn-secondary">Back</a>
@@ -39,4 +42,39 @@ post author :{{post.author.id}} -->
   Likes count-    {{total_likes}} Likes
     <!-- <a href="{%url 'home'%}" class="btn btn-secondary">Back</a> -->
 </form>
+<br><br>
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-2">
+          {% if post.author.profile.profile_pic%}
+        <img src="{{post.author.profile.profile_pic.url}}"  width= 200 height=200 class="img-fluid rounded-start" alt="profile_pic">
+        {% endif%}
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h5 class="card-title">{{post.author}}</h5>
+
+          <p class="small text-muted">
+              {%if post.author.profile.website_url%}
+              <a href="{{post.author.profile.website_url}}">Website</a> |
+              {% endif%}
+              {%if post.author.profile.fb_url%}
+              <a href="{{post.author.profile.fb_url}}">Facebook</a> |
+              {% endif%}
+              {%if post.author.profile.twitter_url%}
+              <a href="{{post.author.profile.twitter_url}}">Twitter</a> |
+              {% endif%}
+              {%if post.author.profile.instagram_url%}
+              <a href="{{post.author.profile.Instagram_url}}">Instagram</a> |
+              {% endif%}
+              {%if post.author.profile.pinterest_url%}
+              <a href="{{post.author.profile.pinterest_url}}">Pinterest</a>
+              {% endif%}
+            </p>
+          <p class="card-text">{{post.author.profile.bio}}.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

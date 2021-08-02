@@ -15,7 +15,7 @@
     {% endif %}
     {% endif %}
     <br>
-    {{post.body|slice:"200"|safe}} --<small>{{post.post_date}}</small></li>
+    {{post.snippet|safe}} --<small>{{post.post_date}}</small></li>
 {%endfor%}
 </ul>
 

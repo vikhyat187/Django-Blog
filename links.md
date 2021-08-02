@@ -54,3 +54,17 @@
 [django ckeditor](https://django-ckeditor.readthedocs.io/en/latest/#:~:text=Install%20or%20add%20django%2Dckeditor,given%20by%20the%20STATIC_ROOT%20setting.)
 
 [media in django](https://docs.djangoproject.com/en/3.2/topics/forms/media/)
+
+[check box for register form ](https://getbootstrap.com/docs/4.0/components/forms/)
+
+[changing password in django](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
+
+[generic views](https://docs.djangoproject.com/en/3.2/ref/class-based-views/generic-editing/)
+
+[storing images in django](https://stackoverflow.com/questions/10408200/how-to-store-image-files-in-django#:~:text=By%20default%2C%20Django%20saves%20all,save%20it%20on%20other%20places.)
+
+[showing images on template](https://stackoverflow.com/questions/901551/how-do-i-include-image-files-in-django-templates)
+
+[adding image to user profile](https://stackoverflow.com/questions/6396442/add-image-avatar-field-to-users/6396744#6396744)
+
+[url field](https://stackoverflow.com/questions/45994290/how-to-make-a-model-field-as-hyperlink-in-django-models)
