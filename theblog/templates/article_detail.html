@@ -22,25 +22,25 @@ post author :{{post.author.id}} -->
 </small>
 <br><br><br>
 {% if post.header_image %}
+<br>
 <img src='{{post.header_image.url}}' style="height:100px;width:fit-content"/>
 {% endif%}
 {{post.body|safe}}
-<br><br>
-<a href="{%url 'home'%}" class="btn btn-secondary">Back</a>
-<br><br>
+<br>
 <form method="POST" action="{% url 'like-post' post.pk %}">
-    {%csrf_token%}
-    {% if request.user.is_authenticated%}
-    {% if liked == False%}
-    <button type="submit" class="btn btn-warning btn-sm" name="post-id" value="{{post.id}}">Like</button>
-    {%else%}
+  {%csrf_token%}
+  {% if request.user.is_authenticated%}
+  {% if liked == False%}
+  <button type="submit" class="btn btn-warning btn-sm" name="post-id" value="{{post.id}}">Like</button>
+  {%else%}
+  <br>
     <button type="submit" class="btn btn-danger btn-sm" name="post-id" value="{{post.id}}">Unlike</button>
     {% endif %}
     {%else %}
         
     <small> <a class="nav-link"href="{%url 'login'%}">Login </a></small>
     {% endif%}
-  Likes count-    {{total_likes}} Likes
+    -    {{total_likes}} Likes
     <!-- <a href="{%url 'home'%}" class="btn btn-secondary">Back</a> -->
 </form>
 <br><br>
@@ -83,5 +83,26 @@ post author :{{post.author.id}} -->
       </div>
     </div>
   </div>
+  <hr>
 
+  <h1>Comments...</h1>
+  <br>
+  {% if not post.comments.all %}
+    No comments yet... <a href="{% url 'add_comment' post.id%}">Add One</a>
+
+    {%else %}
+
+    {%for comment in post.comments.all%}
+    <strong> {{comment.name}}
+      {{comment.date_added}}
+    </strong>
+    <br>
+    {{comment.body}}<br>
+    {% endfor %}
+    <br>
+    <a href="{% url 'add_comment' post.id%}">Add Comment</a>
+    <hr>
+    {% endif %}
+   
+    <br><br>
 {% endblock %}

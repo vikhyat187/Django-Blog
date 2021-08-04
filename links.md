@@ -80,3 +80,7 @@
 [model form django](https://www.javatpoint.com/django-modelforms)
 
 [No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.](https://stackoverflow.com/questions/38840366/no-url-to-redirect-to-either-provide-a-url-or-define-a-get-absolute-url-method)
+
+[What is `related_name` used for in Django?](https://stackoverflow.com/questions/2642613/what-is-related-name-used-for-in-django)
+
+[moving navbar dropdown to left](https://stackoverflow.com/questions/17904862/bootstrap-position-of-dropdown-menu-relative-to-navbar-item)

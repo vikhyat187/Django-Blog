@@ -43,7 +43,8 @@ class CreateProfilePageView(CreateView):
 class EditProfilePageView(generic.UpdateView):
     model=Profile
     template_name='registration/edit_profile_page.html'
-    fields=['bio','profile_pic','website_url','twitter_url','instagram_url','fb_url','pinterest_url']
+    form_class=ProfilePageForm
+    # fields=['bio','profile_pic','website_url','twitter_url','instagram_url','fb_url','pinterest_url']
     success_url=reverse_lazy('home')
     
 def PasswordsChangedView(request):
