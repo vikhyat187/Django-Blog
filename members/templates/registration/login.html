@@ -8,7 +8,9 @@ Login
 <h1>
     Login</h1>
     <br><br>
-   
+   {% if form.errors%}
+   <p>Enter correct email or password</p>
+   {%endif%}
 <div class="form-group">
     <form method="POST">
         {%csrf_token%}
