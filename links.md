@@ -84,3 +84,5 @@
 [What is `related_name` used for in Django?](https://stackoverflow.com/questions/2642613/what-is-related-name-used-for-in-django)
 
 [moving navbar dropdown to left](https://stackoverflow.com/questions/17904862/bootstrap-position-of-dropdown-menu-relative-to-navbar-item)
+
+[configuring whitenoise ](http://whitenoise.evans.io/en/stable/django.html)
