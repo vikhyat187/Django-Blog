@@ -68,3 +68,15 @@
 [adding image to user profile](https://stackoverflow.com/questions/6396442/add-image-avatar-field-to-users/6396744#6396744)
 
 [url field](https://stackoverflow.com/questions/45994290/how-to-make-a-model-field-as-hyperlink-in-django-models)
+
+[accessing static files](https://docs.djangoproject.com/en/3.2/howto/static-files/)
+
+[comma converting MEDIA_URL to tuple](https://stackoverflow.com/questions/54257181/media-root-error-getfullpathname-path-should-be-string-bytes-or-os-pathlike)
+
+[__init__() takes 1 positional argument but 2 were given](https://stackoverflow.com/questions/53572251/django-2-1-3-error-init-takes-1-positional-argument-but-2-were-given/53572256)
+
+[form_valid django](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/)
+
+[model form django](https://www.javatpoint.com/django-modelforms)
+
+[No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.](https://stackoverflow.com/questions/38840366/no-url-to-redirect-to-either-provide-a-url-or-define-a-get-absolute-url-method)

@@ -124,6 +124,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 import os
+
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 LOGIN_REDIRECT_URL='home'

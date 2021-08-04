@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+      
+{% block title %}
+Edit Profile
+{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated%}
+{% if user.id == profile.user.id%}
+<h1>
+    Edit profile page</h1>
+    <br><br>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+  
+        <button class="btn btn-secondary">Update Profile</button>
+</div>
+
+
+{%else %}
+<div class="container center">
+    <h3>You are not authorized to see this page😌</h3>
+    <a href="{%url 'home'%}">Back to Home Page</a>
+</div>
+{% endif %}
+{%else %}
+<div class="container center">
+    <h3>Kindly Login to use this functionality😌</h3>
+    <a href="{%url 'home'%}">Back to Home Page</a>
+</div>
+{% endif %}
+{% endblock %}
