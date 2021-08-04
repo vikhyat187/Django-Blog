@@ -86,3 +86,9 @@
 [moving navbar dropdown to left](https://stackoverflow.com/questions/17904862/bootstrap-position-of-dropdown-menu-relative-to-navbar-item)
 
 [configuring whitenoise ](http://whitenoise.evans.io/en/stable/django.html)
+
+[generating ssh keys](https://stackoverflow.com/questions/32910928/ssh-keygen-no-such-file-or-directory/32914164)
+
+[setting env var django](https://stackoverflow.com/questions/44693485/where-do-i-set-environment-variables-for-django)
+
+[Heroku error codes](https://devcenter.heroku.com/articles/error-codes)
