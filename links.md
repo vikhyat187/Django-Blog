@@ -92,3 +92,5 @@
 [setting env var django](https://stackoverflow.com/questions/44693485/where-do-i-set-environment-variables-for-django)
 
 [Heroku error codes](https://devcenter.heroku.com/articles/error-codes)
+
+[Heroku docs](https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true)
