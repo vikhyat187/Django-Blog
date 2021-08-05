@@ -1,8 +1,11 @@
 from os import name
 from .views import HomeView,ArticleDetailView,UpdatePostView,DeletePostView,AddCategoryView,CategoryView,CategoryListView,LikeView,AddCommentView
-from django.urls import path
+from django.urls import path,include
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
 from theblog.views import *
 urlpatterns = [
+    path("favicon.ico",RedirectView.as_view(url=staticfiles_storage.url("favicon.ico"))),
     # path('', views.home,name="home")
     path('',HomeView.as_view(),name="home"),
     path('article/<int:pk>',ArticleDetailView.as_view(),name="article-detail"),
